@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="mainContain">
+        <div id="player_fields">
+            <!-- Select Player Name -->
+            <!-- <div id="enter_name">
+                <h1>!~ Enter Your Name ~!</h1>
+                <form>
+                    <p>Character Name:</p><input type="text" id="playerName" value="">
+                </form>
+                <button id="submitName" onclick="setName()">Submit Name</button>
+            </div> -->
+            <!-- Select Player Character -->
+
+            <div id="select_character">
+                <h1>!~ Choose Your Character ~!</h1>
+                <div id="char_contain">
+                    <div class="charbox">
+                        <button class="char_select" onclick="setChar(isabelle)"><img src="/images/players/player_1.png"><h2>Isabelle</h2></button>
+                    </div>
+                    <div class="charbox">
+                        <button class="char_select" onclick="setChar(yarin)"><img src="/images/players/player_2.png"><h2>Ya-Rin</h2></button>
+                    </div>
+                    <div class="charbox">
+                        <button class="char_select" onclick="setChar(joseph)"><img src="/images/players/player_3.png"><h2>Joseph</h2></button>
+                    </div>
+                    <div class="charbox">
+                        <button class="char_select" onclick="setChar(beatrix)"><img src="/images/players/player_4.png"><h2>Beatrix</h2></button>
+                    </div>
+                    <div class="charbox">
+                        <button class="char_select" onclick="setChar(yomabac)"><img src="/images/players/player_5.png"><h2>Yomabac</h2></button>
+                    </div>
+                    <div class="charbox">
+                        <button class="char_select" onclick="setChar(tom)"><img src="/images/players/player_6.png"><h2>Tom</h2></button>
+                    </div>
+                </div>
+                <!-- Display the currently selected character, if none selected default to Isabelle -->
+                <div id="char_selected">
+                    <h1>Currently Selected Character:</h1>
+                    <div id="char_select_wrapper">
+                        <div class="player_box">
+                            <div id="selected_img"></div>
+                            <h2 id="select_name"></h2>
+                        </div>
+                        <div id="char_select_stat_wrapper">
+                            <h2 id="selected_level"></h2>
+                            <h2 id="selected_hp"></h2>
+                            <h2 id="selected_atk"></h2>
+                            <h2 id="selected_def"></h2>
+                            <h2 id="selected_description"></h2>
+                        </div>
+                    </div>
+                    <button id="submitName" onclick="chooseCharacter()">Confirm Selection</button>
+                </div>
+                
+            </div>
+
+            <!-- Select Player Weapon -->
+            <div id="weapon_select">
+                <h1>!~ Choose Your Weapon ~!</h1>
+                <div id="weap_contain">
+                    <div class="weap_box">
+                        <img src="images/weapons/sword.png">
+                        <button id="pick_sword" onclick="setWeap(4, 1)">Sword</button>
+                    </div>
+                    <div class="weap_box">
+                        <img src="images/weapons/spear.png">
+                        <button id="pick_spear" onclick="setWeap(4, 3)">Spear</button>
+                    </div>
+                    <div class="weap_box">
+                        <img src="images/weapons/axe.png">
+                        <button id="pick_axe" onclick="setWeap(5, 0)">Axe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fight Section -->
+            <div id="battle">
+                <div><h1>BATTLE TIME!!</h1></div>
+                <div id="battle_contain">
+                    <div id="player_box">
+                        <div id="player_frame"></div>
+                        <div class="trait_field">
+                            <div id="pb_name"></div>
+                            <div id="pb_level"></div>
+                            <div id="pb_hp"></div>
+                            <div id="pb_attack"></div>
+                            <div id="pb_defense"></div>
+                            <div id="pb_xp"></div>
+                        </div>
+                        <div id="player_combat">
+                            <p id="player_para">
+                            </p>
+                        </div>
+                    </div>
+                    <div id="monster_box">
+                        <div id="monster_frame"></div>
+                        <div class="trait_field">
+                            <div id="mb_name"></div>
+                            <div id="mb_level"> </div>
+                            <div id="mb_hp"></div>
+                            <div id="mb_attack"></div>
+                            <div id="mb_defense"></div>
+                        </div>
+                        <div id="monster_combat">
+                            <p id="mon_para"></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="search_mon" onclick="battleSearch()">Search</button>
+                    <button id="do_battle" onclick="battleFunction()">ATTACK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="beastiary.js"></script>
+    <script src="characters.js"></script>
+    <script src="player.js"></script>
+    <script src="cinematics.js"></script>
+</body>
+</html>

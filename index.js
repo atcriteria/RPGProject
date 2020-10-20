@@ -1,4 +1,3 @@
-console.log('hello world');
 /* 
 RPG Fight thing
 What it is: Play as a character and fight monsters that are randomly picked!
@@ -41,12 +40,7 @@ const battleFunction = function(){
     //Roll for player crit
     if ((Math.random() * 100) <= player.crit) crit = true;
     if (crit == true){
-        console.log('before ' + enemy.hp);
         enemy.hp -= Math.ceil(playDmg * 1.5);
-        console.log ('after ' + enemy.hp);
-        console.log('crit: ' + Math.ceil(playDmg * 1.5));
-        console.log(player.attack);
-        console.log(player.playDmg());
     } else {
         enemy.hp -= playDmg; // fixed bug here: When this line was outside of an else{} block it displayed the math incorrectly.
     }
@@ -57,7 +51,6 @@ const battleFunction = function(){
     // 3) check if we killed monster, display win battle text, add xp
     if (enemy.hp <= 0){
         enemy.clearMonFrame();
-        console.log('called clearmonframe')
         return player.victory(enemy);
     }
     // 4) If monster is still alive, it attacks us, if we die, kill us

@@ -6,7 +6,6 @@ const chooseCharacter = function(){
     let insertion = document.getElementById('weapon_select');
     deletion.style.display = 'none';
     insertion.style.display = 'flex';
-    console.log(player.name);
     return;
 }
 
@@ -23,7 +22,6 @@ const setWeap = function(wc, ac){
     document.getElementById('pb_xp').innerHTML = `XP: ${player.xp}`;
     let deletion = document.getElementById('weapon_select');
     let insertion = document.getElementById('battle');
-    console.log('wc = ', player.attack);
     deletion.style.display = 'none';
     insertion.style.display = 'flex';
     return;
@@ -44,16 +42,13 @@ const setSearchBtn = function(){
 // The function that searches for a monster to battle based on the players current level, then loads in the battle frames.
 const battleSearch = function(){
     let monsterGroup = [];
-    console.log(monsterGroup);
     monsterGroup = [...monstersWeak];
     if(player.level >= 5) monsterGroup = [...monstersAvg];
     if(player.level >= 10) monsterGroup = [...monstersStrong];
     if(player.level >= 15) monsterGroup = [...monstersPowerful];
     if(player.level >= 20) monsterGroup = [...monstersEpic];
     let mob = Math.floor(Math.random() * (monsterGroup.length));
-    console.log(mob);
     enemy = new Monster(monsterGroup[mob]);
-    console.log('battle search was called successfully');
     enemy.setMonFrame(monsterGroup[mob]);
     setFightBtn();
     return;

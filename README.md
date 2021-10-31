@@ -10,6 +10,5 @@ The focus of this project was on implementation and not design, so please forgiv
 - Gain XP and level up, increasing character stats
 - Lose XP upon death
 
-## Future Goals
-I currently do not have any futurue goals with this project as my technical skills have increased beyond the scope of it.
-That said, I would like to recreate this project with those technical skills and have outlined a few features that I would include, such as being able to create your own character with a given amount of points to allocate to things such as HP, SP, attack damage, and defense, an inventory system to handle changing equipment and receiving loot from monster battles, and in-game shops to spend fake in-game money on item upgrades and armors. This all would of course be saved on a back end and may even use third party authentication for user security. 
+## Goals
+There are no future goals with this project other than some styling upgrades that it desperately needs. [This project is being recreated with React in this repo!](https://github.com/atcriteria/rpg-sim-fe)
